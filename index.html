@@ -15,7 +15,6 @@
     <img src="./assets/logo.png" style="width: 50px;">
     <span class="app-name">Carona Amiga</span>
     </div>
-    <div class="divRow">
     <nav>
         <ul class="ulNoPointer">
             <li><a class="tagANoDecoration" href="./index.html">Dashboard</a></li> 
@@ -27,14 +26,16 @@
     </nav>
 
     </div>
-    </div>
 </header>
 
 <main>
+    <body>
+        
+
     <div id="divWelcome" class="divWelcome">
-        <h1>Bem vindo(a) ao Carona Fácil</h1>
+        <h1><marquee behavior="scroll" scrollamount="5" scrolldelay="50">Bem vindo(a) ao Carona Fácil</marquee></h1>
         <span class="appInfo">Sua plataforma completa para compartilhamento de viagens e caronas. Encontre viagens ou ofereça assentos para reduzir custos e a pegada de carbono.</span>
-        <span>Aqui você <span>Economiza</span></span>
+        <span class="textWrite">Aqui você <span class="wordToChange" id="wordToChange">Economiza</span></span>
         <div id="allCardsMain" class="allCardsMain">
             <div class="cardsMain">
                 <i class="fa-solid fa-route"></i>
@@ -110,8 +111,17 @@
               </button>
         </div>
 
+        <div class="divNextRide">
+            <span class="spanNextRide">Suas próximas viagens</span>
+
+
+
+        </div>
+
     </div>
 
+</body>
+<script src="./js/index.js"></script>
 </main>
     
 <footer>
