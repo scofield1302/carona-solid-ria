@@ -1,0 +1,412 @@
+/*Fontes externas*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --verdePadrao : #1ca048;
+    --mostardaPadrao: #d89f2d;
+    --vermelhoPadrao: #f04343;
+    --font-Montserrat: 'Montserrat';
+    --borderColor: #e5e7eb;
+    --boxShadowColor: #00000023;
+    --fontColorBrown: #2B303C;
+    --fontColorSubtitle: #676F7E;
+    --buttonColor: #EDEBE9;
+}
+body{
+    margin: 0px;
+}
+
+main{
+    padding: 24px 16px;
+    background-color: #f9f8f6;
+    gap: 15px;
+}
+
+/*Header*/
+
+.divRow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%; /* isso é essencial */
+
+}
+
+
+.ulNoPointer{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 24px;
+}
+
+.tagANoDecoration{
+    text-decoration: none;
+    color: var(--fontColorBrown);
+    font-family: var(--font-Montserrat);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tagANoDecoration:hover{
+    text-decoration: underline;
+    color: var(--verdePadrao);
+}
+
+
+.header-image-and-name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: aqua;
+    height: fit-content;
+
+}
+
+.app-name{
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 24px;
+    width: 200px;
+    color: var(--verdePadrao);
+    font-weight: bold;
+    font-family: var(--font-Montserrat);
+}
+
+.headerContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-style: solid;
+    border-width: 0px;
+    border-color:var(--borderColor) ;
+    padding: 16px 24px;
+    box-shadow: 0px 4px 6px -1px var(--boxShadowColor);
+
+}
+
+
+.divWelcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 32px;
+}
+.appInfo{
+    color: var(--fontColorSubtitle);
+    font-size: 16px;
+    text-align: justify;
+}
+
+.cardsMain {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    align-items: flex-start;
+    border: 1px solid var(--borderColor);
+    box-shadow: 0px 1px 2px 0px var(--boxShadowColor);
+    border-radius: 8px;
+    gap: 10px;
+    background-color: white;
+    
+    min-width: 200px;
+    max-width: 720px;
+  
+    flex: 1 1 200px; /* <-- essa linha é o segredo */
+    height: 120px;
+  }
+  
+
+
+.cardsTitle{
+    font-size: 18px;
+    text-align: left;
+    color: var(--fontColorBrown); 
+    font-weight: bold;   
+    font-family: var(--font-Montserrat);
+
+}
+
+.cardsTitle1{
+    font-size: 18px;
+    text-align: left;
+    color: var(--fontColorBrown); 
+    font-weight: bold;   
+    font-family: var(--font-Montserrat);
+
+}
+
+.cardsCountRide1{
+    color: var(--verdePadrao);
+    font-size: 30px;
+    text-align: left;
+}
+
+
+.cardsCountRide2{
+    color: var(--mostardaPadrao);
+    font-size: 30px;
+    text-align: left;
+}
+
+.fa-ticket{
+    color: var(--mostardaPadrao);
+    align-self: center;
+    width: 34px;
+}
+.cardsSubtitle{
+    font-size: 16px;
+    color: var(--fontColorSubtitle);
+}
+
+.fa-route, .fa-comments{
+    color: var(--verdePadrao);
+    align-self: center;
+    width: 34px;
+}
+
+.divRowCards{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.allCardsMain{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0px;
+}
+
+.yourProfileAndButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.spanYourProfile{
+    font-size: 24px;
+    color: var(--fontColorBrown);
+    font-weight: bold;
+    font-family: var(--font-Montserrat);
+}
+
+.yourProfileMain{
+    display: flex;
+    flex-direction: column;
+}
+
+.profileInfo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.profileInfoPicAndName{
+    display: flex;
+    flex-direction: column;
+    min-width: 190px;
+    max-width: 300px;
+    width: 100%;
+    align-items: center;
+
+}
+.userCarInfo{
+    display: flex;
+    flex-direction: column;
+    min-width: 190px;
+    max-width: 300px;
+    width: 100%;
+}
+.carInfo{
+    font-weight: bold;
+    font-family: var(--font-Montserrat);
+    align-self: left;
+    font-size: 18px;
+}
+
+.carInfoSubtitle{
+    font-size: 16px;
+    color: var(--fontColorSubtitle);
+
+
+}
+
+.userPicture{
+    width: 96px;
+    border-radius: 200px;
+    border-style: solid;
+    border-width: 0px;
+    border-color: var(--borderColor);
+}
+
+.userName{
+    font-size: 18px;
+    font-family: var(--font-Montserrat);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.userRole{
+    font-size: 14px;
+    color: var(--fontColorSubtitle);
+    font-family: var(--font-Montserrat);
+}
+
+.btnEditProfile{
+    padding: 8px 16px;
+    background-color:   var(--buttonColor) ;
+    border-radius: 6px;
+    border-width: 0px;
+    border-style: solid;
+    font-size: 16px;
+    color: var(--fontColorBrown);
+
+}
+
+.mainQuickActions{
+    display: flex;
+    flex-direction: column;
+    flex: 1 ;
+
+}
+
+.quickActions{
+    display: flex;
+    flex-direction: row;
+    margin-top: 24px;
+    flex: 1 ;
+    flex-wrap: wrap;
+}
+
+.btnQuickActions{
+    display: flex;
+    flex-direction: row;
+    flex: 1 ;
+    justify-content: center;  
+    padding: 24px;
+    color: white;
+    border-radius: 6px;
+    border-width: 0px;
+    border-style: solid;
+    font-size: 16px;
+    background-color: var(--verdePadrao);
+    margin-right: 16px;
+    min-width: 220px;
+}
+
+i{
+    margin-right: 10px;
+}
+
+.btnQuickActions2{
+    display: flex;
+    flex-direction: row;
+    flex: 1 ;
+    justify-content: center;  
+    padding: 24px;
+    color: white;
+    border-radius: 6px;
+    border-width: 0px;
+    border-style: solid;
+    font-size: 16px;
+    background-color: var(--mostardaPadrao);
+    margin-right: 16px;
+    min-width: 220px;
+
+}
+
+.btnQuickActions3{
+    display: flex;
+    flex-direction: row;
+    flex: 1 ;
+    justify-content: center;  
+    padding: 24px;
+    color: var(--fontColorBrown);
+    border-radius: 6px;
+    border-width: 0px;
+    border-style: solid;
+    font-size: 16px;
+    background-color: var(--buttonColor);
+    margin-right: 16px;
+    min-width: 220px;
+
+}
+
+.btnQuickActions4{
+    display: flex;
+    flex-direction: row;
+    flex: 1 ;
+    justify-content: center;  
+    padding: 24px;
+    color: var(--fontColorBrown);
+    border-radius: 6px;
+    border-width: 0px;
+    border-style: solid;
+    font-size: 16px;
+    background-color: var(--buttonColor);
+    margin-right: 16px;
+    min-width: 220px;
+
+}
+
+.fa-pen-to-square{
+    color: var(--fontColorBrown);
+}
+
+
+/*Responsividade*/
+
+@media (max-width:800px){
+    .ulNoPointer{
+        display: none;
+    }
+}
+
+@media(max-width:976px){
+    .btnQuickActions4{
+        margin-top: 10px;
+    }
+}
+
+@media(max-width:740px){
+    .btnQuickActions3{
+        margin-top: 10px;
+    }
+}
+
+@media(max-width:504px){
+    .btnQuickActions2{
+        margin-top: 10px;
+    }
+}
+
+
+@media(max-width:541px){
+    .cardsMain{
+        justify-content: center;
+        align-items: center;
+    }
+    i{
+        margin-right: 0px;
+        margin-left: 10px;
+    }
+}
+
+@media(max-width:680px){
+    .userCarInfo{
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .profileInfo{
+        justify-content: center;
+    }
+}
