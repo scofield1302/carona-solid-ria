@@ -6,6 +6,7 @@
     <title>Página Inicial - Carona Solidária</title>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="./assets/app-favicon.svg">
 
 </head>
 <body>
@@ -13,7 +14,7 @@
    <div id="divHeader" class="headerContent">
     <div id="logoAndTextApp" class="divRow">
     <img src="./assets/logo.png" style="width: 50px;">
-    <span class="app-name">Carona Amiga</span>
+    <span class="app-name">Carona Solidária</span>
     </div>
     <nav>
         <ul class="ulNoPointer">
@@ -24,6 +25,7 @@
             <li><a class="tagANoDecoration"  href="./mensagens.html">Mensagens</a></li>
         </ul>
     </nav>
+    <button id="bttnshowPopupSignup" class="bttnSignIn">Entrar</button>
 
     </div>
 </header>
@@ -83,6 +85,7 @@
             </div>
 
             <div class="userCarInfo">
+                <img class="carModel" src="./assets/car-model.svg" alt="Modelo do veículo">
                 <span class="carInfo">Ford Ka 2016</span>
                 <span class="carInfoSubtitle">GGG-1F45</span>
             </div>
@@ -90,22 +93,22 @@
     <div class="mainQuickActions">
         <span class="spanYourProfile">Ações Rápidas</span>
         <div class="quickActions">
-            <button class="btnQuickActions">
+            <button id="bttnDarCarona" class="btnQuickActions">
                 <i class="fa-solid fa-circle-plus"></i>
                  Disponibilizar carona
               </button>
 
-              <button class="btnQuickActions2">
+              <button id="bttnEncontrarCarona" class="btnQuickActions2">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 Encontrar carona
               </button>
 
-              <button class="btnQuickActions3">
+              <button id="bttnReservas" class="btnQuickActions3">
                 <i class="fa-solid fa-ticket" style="color: #2B303C;"></i>
                 Minhas reservas
               </button>
 
-              <button class="btnQuickActions4">
+              <button id="bttnMensagens" class="btnQuickActions4">
                 <i class="fa-solid fa-comments" style="color: black;"></i>
                 Mensagens
               </button>
@@ -121,11 +124,240 @@
     </div>
 
 </body>
-<script src="./js/index.js"></script>
+
 </main>
     
 <footer>
 
+    <div class="mainFooter">
+        <div class="FooterRowContent">
+            <div class="footerDiv1">
+                <div style="margin-bottom: 10px;"><img src="./assets/logo.png" alt="Logo Carona Solidária" style="width: 30px; align-self: center;"> <span class="app-name-footer">Carona Solidária</span></div>
+                <span class="appInfoFooter">Conectando motoristas e passageiros para um deslocamento mais ecológico e acessível.</span>
+                
+            </div>
+            <div class="footerConteiners">
+                <div class="footerDiv2">
+                    <span class="headerTitleSections">Navegação</span>
+                    <a class="tagANoDecoration" href="./index.html"><span class="footerSectionLinks">Dashboard</span></a>
+                    <a class="tagANoDecoration" href="./oferecer_carona.html"><span class="footerSectionLinks">Dar carona</span></a>
+                    <a class="tagANoDecoration" href="./buscar_carona.html"><span class="footerSectionLinks">Buscar carona</span></a>
+                    <a class="tagANoDecoration" href="./reservas.html"><span class="footerSectionLinks">Minhas reservas</span></a>
+                    <a class="tagANoDecoration" href="./mensagens.html"><span class="footerSectionLinks">Mensagens</span></a>
+                </div>
+
+                <div class="footerDiv3">
+                    <span  class="headerTitleSections">Saiba Mais</span>
+                    <a class="tagANoDecoration"><span id="spanAboutUs" class="footerSectionLinks">Sobre nós</span></a>
+                    <a class="tagANoDecoration"><span id="spanHowItWorks" class="footerSectionLinks">Como funciona</span></a>
+                    <a class="tagANoDecoration"><span id="spanSecurity" class="footerSectionLinks">Segurança</span></a>
+                </div>
+
+                <div class="footerDiv4">
+                    <span class="headerTitleSections">Suporte</span>
+                    <a class="tagANoDecoration"><span class="footerSectionLinks">FAQ</span></a>
+                    <a class="tagANoDecoration"><span class="footerSectionLinks">Termos de Uso</span></a>
+                    <a class="tagANoDecoration"><span class="footerSectionLinks">Política de Privacidade</span></a>
+                </div>
+            </div>
+        </div>
+        <span class="footerRightsReserved">© 2025 Carona Solidária. All rights reserved.</span>
+        <div id="popupAboutUs" class="popupAboutUs">
+            <div class="popupTitle">
+            <span>Sobre Nós</span>
+            <i id="iconClosePopupAboutUs" class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <span class="spanAppInfo">Carona Solidária é uma iniciativa que conecta pessoas que fazem trajetos semelhantes, permitindo compartilhar o mesmo veículo de forma prática, econômica e sustentável. A ideia é promover a mobilidade colaborativa, reduzindo custos com transporte, diminuindo o número de veículos nas ruas e contribuindo para um trânsito mais leve e um meio ambiente mais limpo.                As caronas podem ser gratuitas ou oferecidas por um valor simbólico, de acordo com as definições e preferências de cada motorista. O objetivo principal é a solidariedade e o espírito de comunidade — juntos, todos chegam mais longe.</span>
+            <span class="shape"></span>
+
+            <div class="popupTitle">
+                <button id="bttnClosePopup" class="bttnClosePopup">Fechar</button>                
+            </div>
+        </div>
+
+        <div id="popupHowItWorks" class="popupHowItWorks">
+            <div class="popupTitle">
+            <span>Como funciona</span>
+            <i id="iconClosePopupHIW" class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <span class="spanAppInfoHIW">O Carona Solidária é uma iniciativa simples, mas poderosa, que visa conectar pessoas que estão indo para o mesmo destino, permitindo que compartilhem um veículo. Aqui está como funciona:<br><br>
+
+                Cadastro e Planejamento:<br><br>
+                
+                Motoristas e passageiros podem se cadastrar na plataforma, preenchendo informações sobre seu trajeto, como ponto de partida, destino e horário. Isso facilita a conexão entre quem pode oferecer e quem precisa de uma carona.<br><br>
+                
+                Oferta de Carona:<br><br>
+                
+                O motorista oferece uma carona para pessoas que fazem o mesmo percurso, seja para reduzir os custos de viagem ou contribuir para um trânsito mais sustentável.<br><br>
+                
+                Busca e Conexão:<br><br>
+                
+                Os passageiros podem procurar caronas disponíveis no trajeto desejado e entrar em contato com o motorista. Eles podem discutir detalhes, como horários e pontos de encontro.<br><br>
+                
+                Valor Simbólico ou Gratuito:<br><br>
+                
+                A carona pode ser oferecida gratuitamente ou por um valor simbólico, dependendo da preferência do motorista. O objetivo é tornar a viagem mais acessível para todos, sem gerar grandes custos.<br><br>
+                
+                Benefícios:<br><br>
+                
+                Econômico: O custo do transporte é dividido entre os ocupantes do veículo, tornando a viagem mais barata.<br><br>
+                
+                Sustentabilidade: Menos carros nas ruas contribuem para a redução da emissão de poluentes e ajudam a aliviar o trânsito.<br><br>
+                
+                Comodidade: Compartilhar uma carona com outras pessoas cria um ambiente mais agradável e seguro.<br><br>
+                
+                Com o Carona Solidária, todo mundo ganha: motoristas economizam, passageiros têm uma opção mais barata e o planeta agradece!</span>
+            <span class="shape"></span>
+
+            <div class="popupTitle">
+                <button id="bttnClosePopupHIW" class="bttnClosePopup">Fechar</button>                
+            </div>
+        </div>
+
+        <div id="popupSecurity" class="popupSecurity">
+            <div class="popupTitle">
+            <span>Segurança</span>
+            <i id="iconClosePopupsecurity" class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <div class="popupContentScrollable">
+            <span class="spanAppInfoSecurity">A sua segurança é a nossa prioridade no Carona Solidária.<br><br>
+
+                Todos os motoristas e parceiros que oferecem caronas passam por um processo de verificação rigoroso antes de começarem a utilizar a plataforma. Isso inclui:<br><br>
+                
+                📄 Cadastro de dados pessoais como nome completo, CPF e telefone;<br><br>
+                
+                🖼️ Envio de foto de perfil atualizada, para que você saiba com quem está viajando;<br><br>
+                
+                🚗 Informações do veículo, como placa, modelo e cor;<br><br>
+                
+                ✅ Verificação manual e automática dos dados, garantindo que tudo esteja em conformidade com as regras da plataforma.<br><br>
+                
+                Além disso, os usuários podem avaliar uns aos outros após cada viagem, criando uma rede de confiança baseada na experiência real da comunidade.<br><br>
+                
+                Com essas medidas, buscamos proporcionar uma experiência de carona mais segura, transparente e confiável para todos os envolvidos. 
+            </div>
+            <span class="shape"></span>
+
+            <div class="popupTitle">
+                <button id="bttnClosePopupSecurity" class="bttnClosePopup">Fechar</button>                
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Reusable elements -->
+    <!-- Popup signup -->
+     <div id="popupSignUp" class="popupSignUp">
+        <div class="popupSignUpTitle">
+            <span class="popupTitleGreen">Cadastre-se agora mesmo</span>
+            <i id="iconClosePopupSignup" class="fa-solid fa-circle-xmark"></i>
+        </div>
+        <form action="" method="post">
+            <div class="formDivs">
+            <label for="fullName">Seu nome completo</label>
+            <input class="inputSignupForm" id="fullName" type="text" required placeholder="Digite o seu nome Completo"> 
+            </div>
+
+            <div class="formDivs">
+            <label for="userDocument">Seu CPF</label>
+            <input class="inputSignupForm"  id="userDocument" type="text" required placeholder="Seu CPF"> 
+            <i id="iconWrong" class="fa-regular fa-circle-xmark"></i>
+            <i id="iconSucess" class="fa-regular fa-circle-check"></i>
+            </div>
+
+            <div class="formDivs">
+                <label for="userPhone">Seu Telefone de Contato</label>
+                <input class="inputSignupForm"  id="userPhone" type="text" required placeholder="Seu Telefone de Contato"> 
+                </div>
+
+            <div class="formDivs">
+            <label for="role">Eu sou</label>
+            <select class="dropDownSignupForm" id="role" name="inputSignupForm" required placeholder="Selecione o perfil">
+                <option value="Passageiro">Passageiro</option>
+                <option value="Motorista">Motorista</option>
+
+              </select>
+            </div>
+            
+
+            <div id="vehicleData" class="vehicleData">
+                <div class="formDivs">
+                
+                <label for="vehicleAssembler">Montadora do Veículo</label>
+                <select class="dropDownSignupForm" id="vehicleAssembler" placeholder="Selecione a montadora">
+                <option value="Carregando">Carregando...</option>
+                </select>
+                </div>
+
+                <div class="formDivs">
+                <label for="vehicleModel">Modelo do Veículo</label>
+                <select class="dropDownSignupForm" id="vehicleModel" placeholder="Modelo do Veículo">
+                <option value="Carregando">Selecione a Montadora antes</option>
+                </select>
+                </div>
+                
+                <div class="divRow">
+                    <div class="formDivs" style="width: 150px;">
+                        <label for="vehicleYear">Ano do Veículo</label>
+                        <input class="inputSignupForm"  id="vehicleYear" type="text" placeholder="Ano do Veículo" maxlength="4"> 
+                    </div>
+
+                    <div class="divRowVehiclePlate">
+                        <label for="vehiclePlate">Placa do Veículo</label>
+                        <input class="inputSignupFormVehiclePlate"  id="vehiclePlate" type="text" placeholder="Placa do veículo" maxlength="8"> 
+                    </div>
+                </div>
+
+                <div class="formDivs">
+                <label for="vehicleColor">Cor do veículo</label>
+                <select class="dropDownSignupForm" id="colorSelect" placeholder="Cor do veículo">
+                    <option value="#000000" style="background-color: #000000; color: white;">Preto</option>
+                    <option value="#FFFFFF" style="background-color: #FFFFFF; color: black;">Branco</option>
+                    <option value="#808080" style="background-color: #808080; color: white;">Cinza</option>
+                    <option value="#C0C0C0" style="background-color: #C0C0C0; color: black;">Prata</option>
+                    <option value="#FF0000" style="background-color: #FF0000; color: white;">Vermelho</option>
+                    <option value="#0000FF" style="background-color: #0000FF; color: white;">Azul</option>
+                    <option value="#008000" style="background-color: #008000; color: white;">Verde</option>
+                    <option value="#FFFF00" style="background-color: #FFFF00; color: black;">Amarelo</option>
+                    <option value="#FFA500" style="background-color: #FFA500; color: white;">Laranja</option>
+                    <option value="#F5F5DC" style="background-color: #F5F5DC; color: black;">Bege</option>
+                    <option value="#8B4513" style="background-color: #8B4513; color: white;">Marrom</option>
+                    <option value="#800080" style="background-color: #800080; color: white;">Roxo</option>
+                    <option value="#FFC0CB" style="background-color: #FFC0CB; color: black;">Rosa</option>
+                    <option value="#FFD700" style="background-color: #FFD700; color: black;">Dourado</option>
+                    <option value="#B87333" style="background-color: #B87333; color: white;">Cobre</option>
+                </select>
+                  
+                </div>
+            </div>
+
+            <div class="formDivs">
+            <label for="userEmail">Seu e-mail</label>
+            <input class="inputSignupForm"  id="userEmail" type="email" required placeholder="Seu e-mail"> 
+            </div>
+
+            <div class="formDivs">
+            <label for="userPassword">Escolha uma senha</label>
+            <input class="inputSignupForm"  id="userPassword" type="password" required placeholder="Escolha uma senha"> 
+            </div>
+
+            <div style="display: flex; flex-direction: column;">
+            <button id="bttncreateAccount" class="bttncreateAccount">Criar conta</button>
+            <span id="spanAlreadyRegistered" class="spanAlreadyRegistered">Já tem cadasto? Clique aqui.</span>
+            </div>
+
+
+
+        </form>
+
+     </div>
+
+
+
+
+    
 </footer>
+<script src="./js/index.js"></script>
+<script src="./js/fipe.js"></script>
 </body>
 </html>
